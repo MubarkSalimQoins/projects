@@ -1,0 +1,374 @@
+body{
+     font-family: "Work Sans", sans-serif;
+}
+:root{
+ --min-color:#10cab7;
+ --secndry-color:#2c4755;
+ --padding:60px;
+ --secndry-background:#f6f6f6;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/* respoive */
+/* small */
+@media (max-width:767px) {
+  .special-heading{
+    font-size: 50px !important;
+  }
+  .special-heading + p{
+    margin-top: -10px !important;
+  }
+.serevices .service-cont .srv {
+  flex-direction: column; /*يخلي الأيقونة فوق والنص تحت */
+   text-align: center;   /* يوسّط العناصر أفقياً */
+  align-items: center;
+}
+/* .abot-cont{
+  flex-wrap: nowrap;
+} */
+/* .serevices .service-cont .srv .text{
+  text-align: center;
+} */
+}
+@media (min-width:768px) {
+  .container{
+   width: 750px;
+  }
+}
+/* Medium */
+@media (min-width:992px) {
+   .container{
+   width: 960px;
+  }
+}
+@media (max-width:991px) {
+  .abot-cont{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .abot-cont .imgss::before,
+.abot-cont .imgss::after{
+  display: none;
+}
+}
+/* lagre */
+@media (min-width:1200px){
+   .container{
+   width: 1170px;
+  }
+}
+@media (max-width:1199px) {
+  .imegs{
+    display: none;
+  }
+  /* .imgss{
+    display: none;
+  } */
+}
+/* end Global Rules */
+/* star componets */
+.special-heading{
+    text-align: center;
+    font-size: 80px;
+    color: #ebeced;
+    margin: 0;
+    letter-spacing: -3px;
+    font-weight: 800;
+}
+.special-heading + p{
+    color: #797979;
+    text-align: center;
+    font-size: 20px;
+    margin-top: -20px;
+}
+/* end componets */
+/* star header */
+.header{
+  padding: 20px;
+}
+.header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container img{
+width: 60px;
+}
+.header .links .icon{
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.header .links .icon span{
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.header .links .icon span:first-child{
+ width: 100%;
+}
+.header .links .icon span:nth-child(2){
+  width: 60%;
+  transition: 0.3s;
+}
+.header .links .icon span:nth-child(2):hover{
+  width: 100%;
+}
+.header .links .icon span:last-child{
+width: 100%;
+}
+.header .links{
+  position: relative;
+}
+.header .links ul{
+  /*يتمركز ع حسب الاب بتاعه يلي فوقه يشبهه*/
+  list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;/*منشان يجي في بدايه ع اليمين لان التلقائي يجي ع اليسار*/
+    top: calc(100% + 15px);/*مساحه من فوق 15*/
+    min-width: 200px;
+    display: none;
+    z-index: 1;
+}
+.header .links:hover ul{
+  display: block;
+}
+.header .links ul::before{/*يتمركز ع حسب الاب يلي يشبهه فوقه */
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+.header .links ul li a{
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    transition: 0.3s;
+}
+.header .links ul li a:hover{
+  padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a{/*هذا الحاله عندما في النهايه عطيته ايه تعني ضع خط ع مقدار طتابت ايه
+  فقط لاكن عندما اعطيت ايه بلوك ملا الاب بتاعه ال اي وصار عليهم منشان تفهم امثر احذف بلوك من ايه وباتعرف الفرق
+  اذا كان ايه مش بلوك وتبغاه ع ال اي بالكامل باتحذف كلمه ايه يلي في النهايه بايجي بالكامل بغض النظر عن ايه*/
+  border-bottom: 2px solid #ddd;
+}
+/* star end */
+/* star lading */
+.lading{
+  background: url("../images/landing.jpg") no-repeat center center/cover ;
+  width: 100%;
+  height: calc(100vh - 64px);/*64 طول الهيدر حذفه منشان لاتكون مساحه اكبر لانك لو ماسويت راح تكون 
+  مساحه تحت انت نقص من طول الهيدر منشان يضبط */
+  position: relative;
+}
+
+.lading .iner-text h1{
+  margin: 0;/*يجي له مارجين تلقائي حذفته*/
+  color: var(--min-color);
+  font-weight: bold;
+  font-size: 50px;
+}
+.lading .iner-text p{
+  max-width: 270px;
+  line-height: 1.6;
+}
+.lading .iner-text{
+  width: 300px;
+  max-width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+/* end lading */
+/* star fa */
+.features,
+.portfolio{
+  padding: 60px 0;
+  background-color: #f6f6f6;
+}
+.features .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));/*وزع ع حسب المساحه المتاحه بشرط انه كل واحد اقل 
+  قيمه له 300 مثلا عرض الاب لهم 800 مابا يقعون في صف لانه ثلاثه مجموعهم 900 اذا واحد باينزل وهكذا*/
+  gap: 5px;
+}
+.features .row{
+padding: 20px;
+text-align: center;
+}
+.features .row p{
+  line-height: 1.6;
+  color: #777;
+  font-size: 17px;
+}
+.features .row h3{
+  margin: 13px 0;
+  font-weight: 800;
+  font-size: 14px;
+}
+.features .row i{
+  color: var(--min-color);
+  font-size: 45px;
+}
+/* end fa */
+/* star services */
+.serevices{
+  padding: 60px 0;
+}
+.service-cont{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  margin-top: 80px;
+  /* gap: 10px; */
+}
+.service-cont h3{
+  margin-bottom: 10px;
+}
+.serevices .service-cont .srv {
+  display: flex;
+  margin-bottom: 40px;
+}
+.service-cont .srv i{
+  display: inline-block;
+  color: var(--min-color);
+  flex-basis: 50px;/*تعني اذا كانوا صف عرضه يكون 50 وعمود طوله يكون 50 اذا بيتكبر عرضه حقته 
+  وباتكون مثل المساحه بينه وبين العناصر */
+  font-size: 25px;
+}
+.service-cont .srv .text{
+  flex: 1;
+}
+.service-cont .srv p{
+  color: #777;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.service-cont .imegs{
+text-align: center;
+position: relative;
+}
+.service-cont .imegs::before{
+      content: "";
+    background-color:var(--secndry-color);
+    position: absolute;
+    top: -50px;
+    width: 100px;
+    height: calc(100% + 100px);
+    right: 0;
+    z-index: -1;
+}
+/* end services */
+/* star portfolio  */
+.portfolio .portfolio-cont{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  gap: 30px;
+  margin-top: 80px;
+}
+.portfolio .card{
+  background-color: #fff;
+}
+.portfolio .card img{
+  max-width: 100%;
+}
+.portfolio .card .info{
+  padding: 20px;
+}
+.portfolio .card h3{
+  margin:0px;
+}
+.portfolio .card p{
+  margin-top: 10px;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+/* end portfolio  */
+/* star about */
+.about{
+  padding-top: var(--padding);
+  padding-bottom:calc(var(--padding) + 60px) ;
+}
+.abot-cont{
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.abot-cont .imgss{
+  width: 250px;
+  height: 375px;
+  position: relative;
+}
+@media (max-width:991px){
+  .abot-cont .imgss{
+    margin-bottom: 60px;
+  }
+}
+.abot-cont .imgss img{
+  max-width: 100%;
+  /* display: none; */
+}
+.abot-cont .imgss::before{
+  content: "";
+   position: absolute;
+  background-color: #ebeced;
+    width: 99px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}
+.abot-cont .imgss::after{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    border-left: 60px solid var(--min-color);
+    border-bottom: 60px solid var(--min-color);
+    top: -19px;
+    z-index: -1;
+    right: -150px
+}
+.about .teext{
+  /* flex: 1;هذا تستخدمه اذ بدك العرض للفقرات يكون ع دينماكي ع حسب تالي انت تسوي له مارجين منسان تفصله
+  margin-left: 230px; */
+  flex-basis: calc(100% - 500px);/*لانه معك wrap لذلك ماشي مساحه فنزلت العناصر تحت سوينا له فليكس بيس
+  ياخذ 100% ناقص المساحه يلي تبغاها بين الصورة والفقره ولي دي فوقه الكودين صحيحه نفس الناتج 
+  الاب لهم هو كنتينر مساحه 960 -500 مساحه بينهم الباقي عرض الفقرات*/
+}
+.abot-cont p:first-of-type{
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+.abot-cont hr{
+ width: 50%;
+ display: inline-block;
+ border-color: var(--min-color);
+}
+.abot-cont p:last-of-type{
+line-height: 2;
+color: #777;
+}
+/* end about */
