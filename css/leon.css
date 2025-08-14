@@ -6,6 +6,7 @@ body{
  --secndry-color:#2c4755;
  --padding:60px;
  --secndry-background:#f6f6f6;
+ --main-dercu:0.3s
 }
 *{
     box-sizing: border-box;
@@ -16,16 +17,23 @@ body{
     padding: 0 15px;
     margin: 0 auto;
 }
+html{
+  scroll-behavior: smooth;
+}
 /* respoive */
 /* small */
 @media (max-width:767px) {
   .special-heading{
     font-size: 50px !important;
   }
+  #contact .info p,
+  #contact a{
+    font-size: 22px !important;
+  }
   .special-heading + p{
     margin-top: -10px !important;
   }
-.serevices .service-cont .srv {
+  #serevices .service-cont .srv {
   flex-direction: column; /*يخلي الأيقونة فوق والنص تحت */
    text-align: center;   /* يوسّط العناصر أفقياً */
   align-items: center;
@@ -93,6 +101,11 @@ body{
 /* star header */
 .header{
   padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color:#fff;
 }
 .header .container{
   display: flex;
@@ -119,7 +132,7 @@ width: 60px;
 }
 .header .links .icon span:nth-child(2){
   width: 60%;
-  transition: 0.3s;
+  transition: var(--main-dercu);
 }
 .header .links .icon span:nth-child(2):hover{
   width: 100%;
@@ -142,6 +155,7 @@ width: 100%;
     min-width: 200px;
     display: none;
     z-index: 1;
+   
 }
 .header .links:hover ul{
   display: block;
@@ -160,7 +174,7 @@ width: 100%;
     text-decoration: none;
     display: block;
     padding: 15px;
-    transition: 0.3s;
+    transition: var(--main-dercu,);
 }
 .header .links ul li a:hover{
   padding-left: 25px;
@@ -202,7 +216,7 @@ width: 100%;
 /* end lading */
 /* star fa */
 .features,
-.portfolio{
+#portfolio{
   padding: 60px 0;
   background-color: #f6f6f6;
 }
@@ -232,7 +246,7 @@ text-align: center;
 }
 /* end fa */
 /* star services */
-.serevices{
+#serevices{
   padding: 60px 0;
 }
 .service-cont{
@@ -244,7 +258,7 @@ text-align: center;
 .service-cont h3{
   margin-bottom: 10px;
 }
-.serevices .service-cont .srv {
+#serevices .service-cont .srv {
   display: flex;
   margin-bottom: 40px;
 }
@@ -279,25 +293,25 @@ position: relative;
 }
 /* end services */
 /* star portfolio  */
-.portfolio .portfolio-cont{
+#portfolio .portfolio-cont{
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
   gap: 30px;
   margin-top: 80px;
 }
-.portfolio .card{
+#portfolio .card{
   background-color: #fff;
 }
-.portfolio .card img{
+#portfolio .card img{
   max-width: 100%;
 }
-.portfolio .card .info{
+#portfolio .card .info{
   padding: 20px;
 }
-.portfolio .card h3{
+#portfolio .card h3{
   margin:0px;
 }
-.portfolio .card p{
+#portfolio .card p{
   margin-top: 10px;
   color: #777;
   line-height: 1.6;
@@ -305,7 +319,7 @@ position: relative;
 }
 /* end portfolio  */
 /* star about */
-.about{
+#about{
   padding-top: var(--padding);
   padding-bottom:calc(var(--padding) + 60px) ;
 }
@@ -350,7 +364,7 @@ position: relative;
     z-index: -1;
     right: -150px
 }
-.about .teext{
+#about .teext{
   /* flex: 1;هذا تستخدمه اذ بدك العرض للفقرات يكون ع دينماكي ع حسب تالي انت تسوي له مارجين منسان تفصله
   margin-left: 230px; */
   flex-basis: calc(100% - 500px);/*لانه معك wrap لذلك ماشي مساحه فنزلت العناصر تحت سوينا له فليكس بيس
@@ -372,3 +386,42 @@ line-height: 2;
 color: #777;
 }
 /* end about */
+#contact{
+  padding: 60px 0;
+  background-color: var(--secndry-background);
+}
+#contact .info{
+  margin-top: 80px;
+  text-align: center;
+}
+ #contact a{
+  margin: 20px 0 30px;
+    display: block;
+    text-decoration: none;
+    color: crimson;
+    font-size: 35px;
+    font-weight: 800;
+    padding-left: 15px;
+    color: var(--min-color);
+}
+#contact .info p{
+  font-weight: 900;
+    /* margin: 10px 0; */
+    font-size: 35px;
+    color: var(--secndry-color);
+}
+#contact .social i{
+ margin-left: 10px;
+ color: var(--secndry-color);
+}
+/* end contact */
+/* star foter */
+.foter{
+  background-color: var(--secndry-color);
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+.foter span{
+  color: var(--min-color);
+}
