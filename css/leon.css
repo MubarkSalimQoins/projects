@@ -319,7 +319,7 @@ position: relative;
 }
 /* end portfolio  */
 /* star about */
-#about{
+#About{
   padding-top: var(--padding);
   padding-bottom:calc(var(--padding) + 60px) ;
 }
@@ -364,7 +364,7 @@ position: relative;
     z-index: -1;
     right: -150px
 }
-#about .teext{
+#About .teext{
   /* flex: 1;هذا تستخدمه اذ بدك العرض للفقرات يكون ع دينماكي ع حسب تالي انت تسوي له مارجين منسان تفصله
   margin-left: 230px; */
   flex-basis: calc(100% - 500px);/*لانه معك wrap لذلك ماشي مساحه فنزلت العناصر تحت سوينا له فليكس بيس
