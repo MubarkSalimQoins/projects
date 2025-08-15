@@ -414,6 +414,9 @@ color: #777;
  margin-left: 10px;
  color: var(--secndry-color);
 }
+#contact .social a:first-child{
+ font-size: 21px;
+}
 /* end contact */
 /* star foter */
 .foter{
